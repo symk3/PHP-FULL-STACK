@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form {
+      border: 1px solid gray;
+      margin: 15px;
+      padding: 10px;
+    }
+
+    .image {
+      width: 10%;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      text-align: center;
+      line-height: 3;
+      border: 1px solid gray;
+    }
+
+    .container2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .headings {
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .take-away {
+      font-weight: bold;
+    }
+
+    .delivery-time {
+      color: gray;
+    }
+
+    .price {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <div>
+      <h2 style="border-bottom: 1px solid gray; padding-bottom:10px;" class="headings">Pristatymas į paštomatus</h2>
+    </div>
+    <div class="container">
+      <label>
+        <div><input type="radio"></div>
+        <img class="image" src="th.webp">
+        <p class="take-away">Atsiėmimas LP EXPRESS paštomate</p>
+        <p class="delivery-time">2-4 darbo dienos</p>
+        <p class="price">1.99 EUR</p>
+      </label>
+      <label>
+        <div><input type="radio"></div>
+        <img class="image" src="th.webp">
+        <p class="take-away">Atsiėmimas LP EXPRESS paštomate</p>
+        <p class="delivery-time">2-4 darbo dienos</p>
+        <p class="price">1.99 EUR</p>
+      </label>
+      <label>
+        <div><input type="radio"></div>
+        <img class="image" src="th.webp">
+        <p class="take-away">Atsiėmimas LP EXPRESS paštomate</p>
+        <p class="delivery-time">2-4 darbo dienos</p>
+        <p class="price">1.99 EUR</p>
+      </label>
+    </div>
+    <div class="container2">
+      <div>
+        <h2 class="headings">Pasirinkite pristatymo vietą</h2>
+        <p>Miestas*</p>
+        <select>
+          <option value="1">Garliava</option>
+          <option value="2">Kaunas</option>
+          <option value="3">Vilnius</option>
+        </select>
+        <h2 class="headings">Pateikite gavėjo duomenis</h2>
+        <p>Vardas*</p>
+        <input type="text" placeholder="Vardenis">
+        <p>Mobilaus tel. nr.</p>
+        <input type="tel" placeholder="+3704684215">
+      </div>
+      <div>
+        <h2 class="headings correction">blank</h2>
+        <p>Paštomato adresas (paštomatas)</p>
+        <select>
+          <option value="1">IKI Garliava (Vytauto g. 6)</option>
+          <option value="2">ŠILAS Kaunas (Kauno g. 13)</option>
+          <option value="3">RIMI Vilnius (Kedrų g. 5)</option>
+        </select>
+        <h2 class="headings correction">blank</h2>
+        <p>Pavardė*</p>
+        <input type="text" placeholder="Pavardenis">
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
