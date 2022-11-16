@@ -10,6 +10,8 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
@@ -20,9 +22,31 @@
       scroll-behavior: smooth;
     }
 
+    .header {
+      width: 100%;
+      background-color: #999;
+      padding: 0;
+      margin: 0;
+      height: 50px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .header ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .header a {
+      padding: 20px;
+      text-decoration: none;
+    }
+
     .section {
       width: 500px;
       padding: 50px;
+      margin-top: 10px;
     }
 
     .photo {
@@ -106,16 +130,18 @@
 </head>
 
 <body>
-  <ul>
-    <li><a href="#blue">Mėlyna</a></li>
-    <li><a href="#purple">Violetinė</a></li>
-    <li><a href="#orange">Orandžinė</a></li>
-    <li><a href="#orangered">Raudonai orandžinė</a></li>
-    <li><a href="#green">Žalia</a></li>
-    <li><a href="#greenyellow">Žaliai geltona</a></li>
-    <li><a href="#yellow">Geltona</a></li>
-    <li><a href="#brown">Ruda</a></li>
-  </ul>
+  <div class="header">
+    <ul>
+      <li><a href="#blue">Mėlyna</a></li>
+      <li><a href="#purple">Violetinė</a></li>
+      <li><a href="#orange">Orandžinė</a></li>
+      <li><a href="#orangered">Raudonai orandžinė</a></li>
+      <li><a href="#green">Žalia</a></li>
+      <li><a href="#greenyellow">Žaliai geltona</a></li>
+      <li><a href="#yellow">Geltona</a></li>
+      <li><a href="#brown">Ruda</a></li>
+    </ul>
+  </div>
 
   <div id="blue" class="section blue">
     <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, nemo?</h2>
