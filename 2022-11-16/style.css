@@ -29,30 +29,6 @@ img {
   position: relative;
 }
 
-/* .earth {
-  position: absolute;
-  left: 660px;
-  top: 135px;
-}
-
-.moon {
-  position: absolute;
-  left: 1087px;
-  top: 147px;
-}
-
-.mars {
-  position: absolute;
-  left: 1524px;
-  top: 159px;
-}
-
-.meteor {
-  position: absolute;
-  left: 1510px;
-  top: 510px;
-} */
-
 .blue-planet {
   position: absolute;
   left: 65px;
