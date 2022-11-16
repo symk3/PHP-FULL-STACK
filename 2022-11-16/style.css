@@ -10,25 +10,26 @@ body {
   margin: 50px auto;
 }
 
+img {
+  width: 160px;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
   padding: 100px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-content: center;
   text-align: center;
   position: relative;
 }
 
 .planet-container {
-  padding: 20px;
-  align-items: center;
-  align-content: center;
-
+  padding: 30px;
+  position: relative;
 }
 
-.earth {
+/* .earth {
   position: absolute;
   left: 660px;
   top: 135px;
@@ -50,9 +51,23 @@ body {
   position: absolute;
   left: 1510px;
   top: 510px;
+} */
+
+.blue-planet {
+  position: absolute;
+  left: 65px;
+  top: 30px;
 }
 
-.planets-img {
-  padding-right: 10px;
-  padding-left: 10px;
+.blue-planet-size {
+  width: 300px;
+}
+
+.jupiter-planet {
+  position: absolute;
+  left: 65px
+}
+
+.jupiter-planet-size {
+  width: 300px;
 }
