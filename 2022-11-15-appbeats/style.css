@@ -69,4 +69,64 @@ section.home::before {
 
 section.home .container {
   position: relative;
+  display: flex;
+}
+
+section.home .left {
+  width: 50%;
+}
+
+section.home .left h1 {
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20px;
+}
+
+section.home .left p {
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+section.home .buttons {
+  display: flex;
+  gap: 20px;
+
+}
+
+section.home .button.white-button {
+  text-decoration: none;
+  background-color: white;
+  color: #7202bb;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  border: 1px solid white;
+  transition: all 0.3s ease-in-out;
+}
+
+section.home .button.transparent-button {
+  text-decoration: none;
+  background: none;
+  color: white;
+  padding: 12px 30px;
+  border: 1px solid white;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+section.home .button.white-button:hover {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+section.home .button.transparent-button:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: #7202bb;
+  transition: all 0.3s ease-in-out;
 }
