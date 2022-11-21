@@ -1,5 +1,4 @@
 body {
-  background-color: purple;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -76,6 +75,69 @@ section.home .left {
   width: 50%;
 }
 
+section.home .right {
+  width: 50%;
+  position: relative;
+}
+
+video {
+  transform-style: preserve-3d;
+  text-align: center;
+  height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+
+}
+
+.video-wrap {
+  vertical-align: baseline;
+  position: absolute;
+  height: 100%;
+  box-sizing: border-box;
+  top: -2px;
+  font: inherit;
+  padding: 18px;
+  overflow: hidden;
+  left: 4px;
+}
+
+
+section.home .iphone {
+  box-sizing: border-box;
+  min-height: 1px;
+  left: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 5;
+  justify-items: flex-end;
+  position: absolute;
+  right: 8%;
+  max-width: 350px;
+  flex: 0 0 38%;
+  top: 80px;
+}
+
+section.home .iphone img {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: all 400ms ease-in 0s;
+  object-fit: cover;
+}
+
+section.home .iphone-wrap {
+  z-index: 10;
+  object-fit: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 section.home .left h1 {
   font-size: 48px;
   font-weight: 500;
@@ -92,7 +154,6 @@ section.home .left p {
 section.home .buttons {
   display: flex;
   gap: 20px;
-
 }
 
 section.home .button.white-button {
@@ -129,4 +190,54 @@ section.home .button.transparent-button:hover {
   border: 1px solid white;
   color: #7202bb;
   transition: all 0.3s ease-in-out;
+}
+
+.waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.trusted-container {
+  height: 70px;
+}
+
+.img-list {
+  display: flex;
+  list-style: none;
+  padding-right: 100px;
+}
+
+.row {
+  display: flex;
+  padding: 45px;
+  width: 59%;
+  flex-direction: row;
+  height: 100%;
+  padding-left: 400px;
+}
+
+.trusted-image {
+  width: 30%;
+}
+
+.img-list li {
+  text-align: end;
+  margin-left: -170px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.trusted-right-container {
+  width: 70%;
+}
+
+.trusted-text {
+  color: gray;
+  font-size: 18px;
+  font-weight: 400;
 }
