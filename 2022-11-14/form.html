@@ -20,10 +20,12 @@
     }
 
     form {
-      border: 1px solid rgb(212, 212, 212);
+      border: 1px solid rgb(237, 237, 237);
       margin: 15px;
       padding: 20px;
-      width: 100%;
+      width: 50%;
+      margin: 0 auto;
+      background-color: rgb(227, 227, 227);
     }
 
     .label {
@@ -35,25 +37,35 @@
     }
 
     .container {
-      display: grid;
+      display: flex;
       grid-template-columns: 1fr 1fr 1fr;
       width: 100%;
       text-align: center;
       line-height: 3;
-      border: 1px solid rgb(212, 212, 212);
+
       column-gap: 15px;
     }
 
     .container2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .left {
+      width: 50%;
+    }
+
+    .right {
+      width: 50%;
     }
 
     .little-container {
-      border-left: 1px solid rgb(212, 212, 212);
-      border-right: 1px solid rgb(212, 212, 212);
+      border: 1px solid rgb(212, 212, 212);
       border-collapse: collapse;
+      width: 100%;
+      background-color: white;
     }
 
     .headings {
@@ -86,32 +98,36 @@
 
     .city {
       padding: 10px;
-      width: 600px;
+      width: 100%;
       border-color: rgb(212, 212, 212);
     }
 
     .name {
       padding: 10px;
-      width: 600px;
+      width: 100%;
       border: 1px solid rgb(212, 212, 212);
     }
 
     .phone-number {
       padding: 10px;
-      width: 600px;
+      width: 100%;
       border: 1px solid rgb(212, 212, 212);
     }
 
     .pastomatai {
       padding: 10px;
-      width: 600px;
+      width: 100%;
       border: 1px solid rgb(212, 212, 212);
     }
 
     .last-name {
       padding: 10px;
-      width: 600px;
+      width: 100%;
       border: 1px solid rgb(212, 212, 212);
+    }
+
+    .headings.correction {
+      color: rgb(227, 227, 227);
     }
   </style>
 </head>
@@ -146,7 +162,7 @@
       </div>
     </div>
     <div class="container2">
-      <div>
+      <div class="left">
         <h2 class="headings">Pasirinkite pristatymo vietą</h2>
         <p class="text2">Miestas*</p>
         <select class="city">
@@ -160,15 +176,15 @@
         <p class="text2">Mobilaus tel. nr.*</p>
         <input class="phone-number" type="tel" placeholder="+3704684215">
       </div>
-      <div>
-        <h2 class="headings correction">blank</h2>
+      <div class="right">
+        <h2 class="headings correction">.</h2>
         <p class="text2">Paštomato adresas (paštomatas)*</p>
         <select class="pastomatai">
           <option value="1">IKI Garliava (Vytauto g. 6)</option>
           <option value="2">ŠILAS Kaunas (Kauno g. 13)</option>
           <option value="3">RIMI Vilnius (Kedrų g. 5)</option>
         </select>
-        <h2 class="headings correction">blank</h2>
+        <h2 class="headings correction">.</h2>
         <p class="text2">Pavardė*</p>
         <input class="last-name" type="text" placeholder="Pavardenis">
       </div>
