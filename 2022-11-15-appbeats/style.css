@@ -49,7 +49,7 @@ header nav ul a:hover {
 
 section.home {
   background: url(../2022-11-15-appbeats/images/hero-bg-3.jpg);
-  height: 660px;
+  height: 480px;
   padding-top: 200px;
   position: relative;
 }
@@ -116,7 +116,7 @@ section.home .iphone {
   right: 8%;
   max-width: 350px;
   flex: 0 0 38%;
-  top: 80px;
+  top: -50px;
 }
 
 section.home .iphone img {
