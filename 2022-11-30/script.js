@@ -4,55 +4,54 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-console.log("Veikia external javascript failas");
+// console.log("Veikia external javascript failas");
 
-const x = 10;
+// const x = 10;
 
-console.log("Pirmoji gauta reiksme: " + x);
+// console.log("Pirmoji gauta reiksme: " + x);
 
-// x = 15;
+// // x = 15;
 
-// console.log(x);
+// // console.log(x);
 
-let y = 15;
+// let y = 15;
 
-y = 20;
+// y = 20;
 
-console.log("Antroji gauta reikšmė:", y);
+// console.log("Antroji gauta reikšmė:", y);
 
-y += 2;
+// y += 2;
 
-console.log("Pliuso operatorius:", y);
+// console.log("Pliuso operatorius:", y);
 
-y -= 10;
+// y -= 10;
 
-console.log("Minus operatorius:", y);
+// console.log("Minus operatorius:", y);
 
-y *= 3;
+// y *= 3;
 
-console.log("Daugybos operatorius:", y);
+// console.log("Daugybos operatorius:", y);
 
-y /= 2;
+// y /= 2;
 
-console.log("Dalybos operatorius:", y);
+// console.log("Dalybos operatorius:", y);
 
-y++;
+// y++;
 
-console.log("Inkrementinis operatorius:", y);
+// console.log("Inkrementinis operatorius:", y);
 
-y--;
+// y--;
 
-console.log("Dekrementinis operatorius:", y);
+// console.log("Dekrementinis operatorius:", y);
 
 //Kondicinė logika
 
 //Pirmas pavyzdys
 // y = false;
-
-// if(y) {
-//     console.log('Kintamasis egzistuoja');
+// if (y) {
+//   console.log("Kintamasis egzistuoja");
 // } else {
-//     console.log('Kintamasis neegzistuoja');
+//   console.log("Kintamasis neegzistuoja");
 // }
 
 //Antras pavyzdys
@@ -61,18 +60,21 @@ console.log("Dekrementinis operatorius:", y);
 
 // console.log(typeof z);
 
-// if(!z) { //Bang operatorius
-//     console.log('Z turi neigiamą reikšmę');
+// if (!z) {
+//   //Bang operatorius
+//   console.log("Z turi neigiamą reikšmę");
 // }
-
 //Trečias pavyzdys
 
-// let w = 40;
+// let w = 20;
+// let z = 20;
 
-// if(w != 40) {
-//     console.log('Kintamasis w nėra lygus 40');
+// w += z;
+
+// if (w != 40) {
+//   console.log("Kintamasis w nėra lygus 40");
 // } else {
-//     console.log('Kintamasis yra lygus 40');
+//   console.log("Kintamasis yra lygus 40");
 // }
 
 //Ketvirtas pavyzdys
@@ -113,31 +115,31 @@ console.log("Dekrementinis operatorius:", y);
 
 //Stringai
 
-const stringas =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting";
+// const stringas =
+//   "Lorem Ipsum is simply dummy text of the printing and typesetting";
 
-console.log(stringas);
+// console.log(stringas);
 
-console.log("Ketvirtoji stringo raidė:", stringas[4]);
+// console.log("Ketvirtoji stringo raidė:", stringas[4]);
 
-console.log("Stringo ilgis yra:", stringas.length);
+// console.log("Stringo ilgis yra:", stringas.length);
 
-let modifikuotasStringas =
-  "pridėtas tekstas iš priekio" + stringas + " pridėtas tekstas iš galo";
+// let modifikuotasStringas =
+//   "pridėtas tekstas iš priekio" + stringas + " pridėtas tekstas iš galo";
 
-//Pirmas variantas
-// modifikuotasStringas = modifikuotasStringas.replaceAll('tekstas', 'z');
-// modifikuotasStringas = modifikuotasStringas.replaceAll('simply', 'hardly');
+// //Pirmas variantas
+// // modifikuotasStringas = modifikuotasStringas.replaceAll('tekstas', 'z');
+// // modifikuotasStringas = modifikuotasStringas.replaceAll('simply', 'hardly');
+
+// // console.log(modifikuotasStringas);
+
+// //Antras Variantas
+// modifikuotasStringas = modifikuotasStringas
+//   .replaceAll("tekstas", "z")
+//   .replaceAll("simply", "hardly");
 
 // console.log(modifikuotasStringas);
 
-//Antras Variantas
-modifikuotasStringas = modifikuotasStringas
-  .replaceAll("tekstas", "z")
-  .replaceAll("simply", "hardly");
+// const randomSkaicius = rand(5, 150);
 
-console.log(modifikuotasStringas);
-
-const randomSkaicius = rand(5, 150);
-
-console.log("Atsitiktinis skaičius", randomSkaicius);
+// console.log("Atsitiktinis skaičius", randomSkaicius);
