@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 2022-12-05</title>
+  <style>
+    html {
+      word-break: break-all;
+    }
+  </style>
+</head>
+
+<body>
+  <div style=""></div>
+  <script>
+
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    // Naršyklėje nupieškite linija iš 400 “*”.
+    //Naudodami css stilių “suskaldykite” liniją taip, kad visos žvaigždutės matytųsi ekrane;
+    //Programiškai “suskaldykite” žvaigždutes taip, kad vienoje eilutėje nebūtų daugiau nei 50 “*”;
+
+    // document.write('<h1>Linija</h1>')
+
+    // let i = 0;
+    // let result = '';
+    // while (i < 400) {
+    //   if (i % 50 === 0 && i != 0)
+    //     result += '<br/>'
+    //   result += '*';
+    //   i++;
+    // }
+
+    // document.write(result);
+
+    //Naudokite funkcija rand(). Sugeneruokite atsitiktinį skaičių nuo 1 iki 6 ir jį atspausdinkite atitinkame h tage. Pvz skaičius 3- rezultatas: <h3>3</h3>
+
+    // document.write('<h3>Atsitiktinis skaicius: </h3> ')
+
+    // let random = rand(1, 6);
+
+    // document.write(random)
+
+    // Naudokite funkcija rand(). Atspausdinkite 3 skaičius nuo -10 iki 10. Skaičiai mažesni už 0 turi būti žali, 0 - raudonas, didesni už 0 mėlyni.
+
+
+    // let skaicius1 = rand(-10, 10)
+    // let skaicius2 = rand(-10, 10)
+    // let skaicius3 = rand(-10, 10)
+
+
+    // if (skaicius1 < 0) {
+    //   document.write('<h3 style="color: green;">Žali neigiami: ' + skaicius1 + '</h3>')
+    // }
+
+
+    // while (skaicius2 <= 0) {
+    //   if (skaicius2 === 0) {
+    //     document.write('<h3 style="color: red;">Raudonas nulinis: ' + skaicius2 + '</h3>')
+    //   }
+    //   skaicius2++
+    // }
+
+
+    // if (skaicius3 > 0) {
+    //   document.write('<h3 style="color: blue;">Mėlyni teigiami: ' + skaicius3 + '</h3>')
+    // }
+
+
+    // //Sukurkite kintamąjį su stringu: “An American in Paris”. Jame ištrinti visas balses. Rezultatą atspausdinti. Kodą pakartoti su stringais: “Breakfast at Tiffany's”, “2001: A Space Odyssey” ir “It's a Wonderful Life”.
+
+    // const size = 25;
+    // let result = '';
+
+    // for (let y = 25; y <= size; y++) {
+    //   for (let x = 24; x <= size; x++) {
+    //     if (y === x || x === (size - y) + 0) {
+    //       result += '<span style="color: red;">n mrcn n Prs</span>';
+    //     } else {
+    //       result += 'Nėra balsių: ';
+    //     }
+    //   }
+    //   result += '<br />';
+    // }
+
+    // document.write(result);
+
+    // const size1 = 25;
+    // let result1 = '';
+
+    // for (let y = 25; y <= size1; y++) {
+    //   for (let x = 24; x <= size1; x++) {
+    //     if (y === x || x === (size1 - y) + 0) {
+    //       result1 += '<span style="color: red;">Brkfst t Tffn</span>';
+    //     } else {
+    //       result1 += 'Nėra balsių: ';
+    //     }
+    //   }
+    //   result1 += '<br />';
+    // }
+
+    // document.write(result1);
+
+    // const size2 = 25;
+    // let result2 = '';
+
+    // for (let y = 25; y <= size2; y++) {
+    //   for (let x = 24; x <= size2; x++) {
+    //     if (y === x || x === (size2 - y) + 0) {
+    //       result2 += '<span style="color: red;">2:  Spc dss</span>';
+    //     } else {
+    //       result2 += 'Nėra balsių: ';
+    //     }
+    //   }
+    //   result2 += '<br />';
+    // }
+
+    // document.write(result2);
+
+    // Sugeneruokite 300 atsitiktinių skaičių nuo 0 iki 300, atspausdinkite juos atskirtus tarpais ir suskaičiuokite kiek tarp jų yra didesnių už 150.  Skaičiai didesni nei 275 turi būti raudonos spalvos.
+
+    // document.write('<h1>Linija</h1>');
+
+    // let i = 0;
+    // let result = '';
+
+    // while (i < 300) {
+    //   //% ženklas yra remainder operatorius. Tikriname ar į "i" kintamojo reikšmę galime patalpinti skaičių 50 be liekanos.
+    //   if (i % 50 === 0 && i != 0)
+    //     result += '<br />';
+
+    //   result += '*';
+    //   i++;
+    // }
+
+    // document.write(result);
+
+    // document.write('<h1>3 užduotis:</h1>');
+
+    // const string1 = "An American in Paris";
+    // const string2 = "Breakfast at Tiffany's";
+    // const string3 = "2001: A Space Odyssey";
+    // const string4 = "It's a Wonderful Life";
+
+    // document.write(string1.replace(/[AaEeIiYyOoUu]/g, '') + '<br>');
+    // document.write(string2.replace(/[AaEeIiYyOoUu]/g, '') + '<br>');
+    // document.write(string3.replace(/[AaEeIiYyOoUu]/g, '') + '<br>');
+    // document.write(string4.replace(/[AaEeIiYyOoUu]/g, '') + '<br>');
+
+    // document.write('<h1>4 užduotis:</h1>');
+
+    // let sum = 0;
+    // result = '';
+    // i = 0;
+    // let n = 0;
+    // while (i < 300) {
+    //   rnumber = rand(0, 300);
+    //   i++;
+    //   result = rnumber + ' ';
+
+    //   if (rnumber > 275) {
+    //     result = '<span style="color: red">' + rnumber + ' </span>';
+    //   }
+    //   if (rnumber >= 150) {
+    //     n++;
+    //   }
+    //   document.write(result);
+    // }
+    // document.write('<h3>Skaičiai didesni už 150:' + n, '</h3>');
+
+    //Vienoje eilutėje atspausdinkite visus skaičius nuo 1 iki 3000, kurie dalijasi iš 77 be liekanos. Skaičius atskirkite kableliais. Po paskutinio skaičiaus kablelio neturi būti. Jeigu reikia, panaudokite css, kad visi rezultatai matytųsi ekrane.
+
+    // document.write('<h1>5 užduotis:</h1>');
+
+    // i = 0;
+
+    // while (i < 3000) {
+    //   if (i != 0 && i % 77 === 0) {
+    //     document.write(i + ', ');
+    //   }
+    //   i++;
+
+    // }
+  </script>
+</body>
+
+</html>

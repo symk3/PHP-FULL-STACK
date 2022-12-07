@@ -25,19 +25,13 @@ function rand(min, max) {
 // console.log("gautus obuolius padalinti iš kriaušių", y);
 
 // //pirma uzduotis
-// let vardas;
-// let pavarde;
+// let vardas = "Jonas";
+// let pavarde = "Jonaitis";
 
-// vardas = 1;
-// pavarde = 0;
-
-// console.log("Jonas", "Jonaitis");
-
-// if (vardas > pavarde) {
-//   console.log("Jonas");
+// if (vardas.length < pavarde.length) {
+//   console.log(vardas);
 // } else {
-//   vardas < pavarde;
-//   console.log("Jonaitis");
+//   console.log(pavarde);
 // }
 
 // antra uzduotis
@@ -83,32 +77,32 @@ function rand(min, max) {
 // console.log(naujasPavadinimas);
 
 //penkta uzduotis
-const skaicius1 = rand(0, 2);
-const skaicius2 = rand(0, 2);
-const skaicius3 = rand(0, 2);
-const skaicius4 = rand(0, 2);
+// const skaicius1 = rand(0, 2);
+// const skaicius2 = rand(0, 2);
+// const skaicius3 = rand(0, 2);
+// const skaicius4 = rand(0, 2);
 
-let nuliai = 0;
-let vienetai = 0;
-let dvejetai = 0;
+// let nuliai = 0;
+// let vienetai = 0;
+// let dvejetai = 0;
 
-console.log(skaicius1, skaicius2, skaicius3, skaicius4);
+// console.log(skaicius1, skaicius2, skaicius3, skaicius4);
 
-if (skaicius1 === 0) nuliai++;
-if (skaicius2 === 0) nuliai++;
-if (skaicius3 === 0) nuliai++;
-if (skaicius4 === 0) nuliai++;
+// if (skaicius1 === 0) nuliai++;
+// if (skaicius2 === 0) nuliai++;
+// if (skaicius3 === 0) nuliai++;
+// if (skaicius4 === 0) nuliai++;
 
-if (skaicius1 === 1) vienetai++;
-if (skaicius2 === 1) vienetai++;
-if (skaicius3 === 1) vienetai++;
-if (skaicius4 === 1) vienetai++;
+// if (skaicius1 === 1) vienetai++;
+// if (skaicius2 === 1) vienetai++;
+// if (skaicius3 === 1) vienetai++;
+// if (skaicius4 === 1) vienetai++;
 
-if (skaicius1 === 2) dvejetai++;
-if (skaicius2 === 2) dvejetai++;
-if (skaicius3 === 2) dvejetai++;
-if (skaicius4 === 2) dvejetai++;
+// if (skaicius1 === 2) dvejetai++;
+// if (skaicius2 === 2) dvejetai++;
+// if (skaicius3 === 2) dvejetai++;
+// if (skaicius4 === 2) dvejetai++;
 
-console.log("Nuliai:", nuliai);
-console.log("Vienetai:", vienetai);
-console.log("Dvejetai:", dvejetai);
+// console.log("Nuliai:", nuliai);
+// console.log("Vienetai:", vienetai);
+// console.log("Dvejetai:", dvejetai);
