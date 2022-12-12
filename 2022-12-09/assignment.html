@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge</title>
+  <style>
+    body {
+      word-break: break-all;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+
+    //1 užduotis:
+    document.write('<h1>1 užduotis</h1>');
+
+    const string = 'ABCD';
+    const letters = [];
+    let a = 0;
+    let b = 0;
+    let c = 0;
+    let d = 0;
+    for (let i = 0; i < 200; i++) {
+      let letter = string[rand(0, 3)];
+      letters.push(letter);
+      if (letters[i] === 'A') {
+        a++;
+      }
+      else if (letters[i] === 'B') {
+        b++;
+      }
+      else if (letters[i] === 'C') {
+        c++;
+      }
+      else {
+        d++;
+      }
+    }
+    document.write('<h3>' + letters + '</h3>');
+    document.write('<h3> A raidžių, yra: ' + a + ' B raidžių, yra: ' + b + ' C raidžių, yra: ' + c + ' D raidžių, yra: ' + d + '</h3>');
+
+    //2 užduotis:
+    document.write('<h1>2 užduotis</h1>');
+
+    letters.sort();
+    document.write('<h3>' + letters + '</h3>');
+
+    //3 užduotis:
+    document.write('<h1>3 užduotis</h1>');
+
+    const one = [];
+    const two = [];
+    const three = [];
+    const all = [];
+    let unique = 0;
+    let combo = all.length;
+    for (let i = 0; i < 200; i++) {
+      let letter = string[rand(0, 3)];
+      one.push(letter);
+
+      letter = string[rand(0, 3)];
+      two.push(letter);
+
+      letter = string[rand(0, 3)];
+      three.push(letter);
+    }
+    for (let i = 0; i < one.length; i++) {
+      all.push(one[i] + two[i] + three[i]);
+      if (one[i] !== two[i] && one[i] !== three[i] && two[i] !== three[i]) {
+        unique++;
+      }
+    }
+    for (let i = 0; i < all.length; i++) {
+      for (let j = 0; j < all.length; j++) {
+        if (i !== j) {
+          if (all[i] === all[j]) {
+            combo++;
+            break;
+          }
+        }
+      }
+    }
+    document.write('<h3>Unikalios reikšmės (' + combo + ').</h3>');
+    document.write('<h3>Unikali kombinacija masyve (' + unique + ').</h3>');
+
+    //4 užduotis:
+    document.write('<h1>4 užduotis</h1>');
+
+    const random1 = [];
+    const random2 = [];
+    for (let i = 0; i < 100; i++) {
+      let number = rand(100, 999);
+      let check = random1.includes(number);
+      if (check === false) {
+        random1.push(number);
+      } else {
+        while (check === true) {
+          number = rand(100, 999);
+          check = random1.includes(number);
+          if (check === false) {
+            random1.push(number);
+          }
+        }
+      }
+    }
+    for (let i = 0; i < 100; i++) {
+      let number = rand(100, 999);
+      let check = random2.includes(number);
+      if (check === false) {
+        random2.push(number);
+      }
+      else {
+        while (check === true) {
+          number = rand(100, 999);
+          check = random2.includes(number);
+          if (check === false) {
+            random2.push(number);
+          }
+        }
+      }
+    }
+    document.write('<h3>Pirmas masyvas su unikaliomis reikšmėmis: ', random1, '</h3>');
+    document.write('<h3>Antras masyvas su unikaliomis reikšmėmis: ', random2, '</h3>');
+
+    //5 užduotis:
+    document.write('<h1>5 užduotis</h1>');
+
+    const random3 = [];
+
+    for (let i = 0; i < random1.length; i++) {
+      let number = random1[i];
+      let check = random2.includes(number);
+      if (check === false) {
+        random3.push(number);
+      }
+
+    }
+    document.write('<h3> Masyvas iš reikšmių, kurios yra pirmame masyve, bet nėra antrame masyve: ', random3, '</h3>');
+
+    //6 užduotis:
+    document.write('<h1>6 užduotis</h1>');
+
+    const random4 = [];
+
+    for (let i = 0; i < random1.length; i++) {
+      let number = random1[i];
+      let check = random2.includes(number);
+      if (check === true) {
+        random4.push(number);
+      }
+    }
+    document.write('<h3> Masyvas iš reikšmių, kurios yra  ir pirmame, ir antrame masyve: ', random4, '</h3>');
+  </script>
+</body>
+
+</html>

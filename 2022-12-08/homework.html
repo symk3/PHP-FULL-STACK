@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework</title>
+</head>
+
+<body>
+
+
+
+
+
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+
+
+
+    //1 užduotis:
+    document.write('<h1>1 užduotis</h1>')
+
+    let Kpoints = 0;
+    let Ppoints = 0;
+    while (true) {
+      const Kazys = rand(10, 20);
+      Kpoints = Kazys + Kpoints;
+      const Petras = rand(5, 25);
+      Ppoints = Petras + Ppoints;
+      if ((Kpoints === Ppoints) && Kpoints >= 222) {
+        document.write('<h2> Partiją paibaigė ligiosiomis.</h2>');
+        break;
+      }
+      else if (Kpoints >= 222) {
+        document.write('<h2> Partiją laimėjo: Kazys </h2>');
+        break;
+      }
+      else if (Ppoints >= 222) {
+        document.write('<h2> Partiją laimėjo: Petras </h2>');
+        break;
+      }
+    } console.log(Kpoints, Ppoints);
+
+
+
+
+  </script>
+</body>
+
+</html>

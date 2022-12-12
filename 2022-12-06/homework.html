@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masyvai namu darbai</title>
+</head>
+
+<body>
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    //VIDURKIO APSKAICIAVIMAS
+
+    // const skaiciai = [rand(0, 100), rand(0, 100), rand(0, 100)];
+    // let total = 0
+
+    // for (let i = 0; i < skaiciai.length; i++) {
+    //   total += skaiciai[i]
+    // }
+
+    // document.write('Vidurkis:', (total / skaiciai.length).toFixed(2));
+
+    //Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra atsitiktiniai skaičiai nuo 5 iki 25.
+    let masyvas = [];
+    let total = 0;
+    let numbers = 0
+
+    for (let i = 0; i < 30; i++) {
+      masyvas[masyvas.length] = rand(5, 25)
+    }
+    document.write('Rezultatas:', masyvas);
+  </script>
+</body>
+
+</html>
