@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Užduočių sprendimai 2022-12-13</title>
+</head>
+
+<body>
+  <script>
+    function rand(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    document.write('<h4>Sukurkite funkciją kuri priimtų parametrą "name". Jos tikslas atspausdinti naršyklėje tekstą "Labas," ir šalia jo perduotą vardą. Pvz "Labas, Elena".</h4>');
+
+
+    const pirmaFunkcija = name => {
+      document.write('Labas, ' + name)
+    }
+    pirmaFunkcija('Elena')
+
+
+    document.write('<h4>Sukurkite funkciją  kuri priimtų vieną parametrą (tekstą) ir grąžintų atsakymą kiek simbolių yra tame tekste. Iš funkcijos gautą rezultatą atvaizduokite naršyklėje.</h4>');
+
+
+    function antraFunkcija(text) {
+      return text.length
+    }
+    document.write('Zodyje "besikiskiakopustaliaudamas" esanciu raidziu kiekis: ', (antraFunkcija("besikiskiakopustaliaudamas")))
+
+
+    const capitalizeFirstLetter = (string, string1) => {
+      let first_name = string[0].toUpperCase();
+      let last_name = string1[0].toUpperCase();
+
+      string = first_name + string.slice(1);
+      string1 = last_name + string1.slice(1);
+
+
+      return string + ' ' + string1;
+
+    }
+
+    document.write('<h4>Sukurkite funkciją kuri priimtų du parametrus name ir last_name. Funkcija turi grąžinti vieną stringą, kuriame būtų vardas ir pavardė prasidedantys didžiosiomis raidėmis.</h4>');
+    document.write(capitalizeFirstLetter('simonas', 'lukšys'));
+
+
+
+    document.write('<h4>Parašykite funkciją kuri sugeneruotų 3 random skaičius nuo 0 iki 5 ir atspausdintų konsolėje vienoje eilutėje atskirtus kableliais. Po paskutinio skaičiaus kablelio neturi būti.</h4>');
+
+    const randomNumbersList = (length = 3) => {
+      const numbers = [];
+
+      for (let i = 0; i < length; i++) {
+        numbers[numbers.length] = rand(0, 5);
+      }
+      console.log(numbers.join(','));
+      document.write(numbers);
+    }
+
+    randomNumbersList(10)
+
+
+  </script>
+</body>
+
+</html>
