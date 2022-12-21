@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClassWork 2022-12-20</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css " rel="stylesheet">
+</head>
+
+<body>
+
+  <!--CRUD-->
+  <!--
+    C - Create
+    R - Read
+    U - Update
+    D - Delete
+  -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nuotrauka</th>
+        <th>Pavadinimas</th>
+        <th>Kiekis</th>
+        <th>Kaina</th>
+        <th>Sandėlis</th>
+        <th>Suma</th>
+        <th>Pristatymas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Treniruoklis</td>
+        <td>2</td>
+        <td>200</td>
+        <td>Kaunas</td>
+        <td>400</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    const data = [
+      {
+        name: 'Treniruoklis',
+        qty: 5,
+        price: 199.99,
+        location: 'Kaunas',
+        delivery: '1-3 d.d.',
+        picture: 'https://picsum.photos/50/50?random=1'
+      },
+      {
+        name: 'Kasos aparatas',
+        qty: 64,
+        price: 175.45,
+        location: 'Vilnius',
+        delivery: '1-2 d.d.',
+        picture: 'https://picsum.photos/50/50?random=2'
+      },
+      {
+        name: 'Dviratis',
+        qty: 9,
+        price: 159.58,
+        location: 'Klaipėda',
+        delivery: '1-5 d.d.',
+        picture: 'https://picsum.photos/50/50?random=3'
+      },
+      {
+        name: 'Paspirtukas',
+        qty: 11,
+        price: 300,
+        location: 'Kaunas',
+        delivery: '1-2 d.d.',
+        picture: 'https://picsum.photos/50/50?random=4'
+      }
+    ];
+
+    // for (let i = 0; i < data.length; i++) {
+    //   console.log(data[i]);
+    // }
+
+    // for (const product of data) {
+    //   console.log(product)
+    // }
+    let result = '';
+
+    // Function variantas, po juo aktyvu darome arrow varianta (Map ciklo paleidimas)
+    // data.map(function(product){
+
+
+    // });
+
+    data.map(product => {
+      result += `
+ <tr>
+    <td>
+       <img src="${product.picture}" alt="${product.name}"
+    </td>
+    <td>${product.name}</td>
+    <td>${product.qty}</td>
+    <td>${product.price}</td>
+    <td>${product.location}</td>
+    <td>${product.price * product.qty}</td>
+    <td>${product.delivery}</td>
+ </tr>
+  
+  `;
+    });
+
+    console.log(result)
+
+    document.querySelector('tbody').innerHTML = result;
+
+  </script>
+</body>
+
+</html>
