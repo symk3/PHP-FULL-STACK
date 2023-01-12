@@ -43,102 +43,100 @@
   <div class="container d-flex justify-content-center">
     <div class="col-md-3">
       <div class="card">
-        <div class="card-header bg-white d-flex justify-content-center flex-column colorbg">
+        <div class="card-header bg-white d-flex justify-content-center flex-column colorbg section">
           <img src="https://picsum.photos/15/15?random=1" class="rounded mx-auto d-block m-3">
           <h4 class="text-center">Simonas Lukšys</h4>
           <h6 class="text-center">Full stack developer</h6>
         </div>
         <div class="card-body">
           <div>
-            <div class="d-flex mb-3 border rounded ">
-              <div class="ion-container">
-                <ion-icon class="fs-3" name="call-sharp"></ion-icon>
-              </div>
-              <div class="d-flex flex-column">
-                <div>Phone</div>
-                <div>+3706458184</div>
-              </div>
-            </div>
-            <div class="d-flex mb-3 border rounded ">
-              <div class="ion-container">
-                <ion-icon class="fs-3" name="mail-sharp"></ion-icon>
-              </div>
-              <div class="d-flex flex-column">
-                <div>Email Address</div>
-                <div>simonas.luksys@gmail.com</div>
-              </div>
-            </div>
-            <div class="d-flex mb-3 border rounded ">
-              <div class="ion-container">
-                <ion-icon class="fs-3" name="link-sharp"></ion-icon>
-              </div>
-              <div class="d-flex flex-column">
-                <div>Website</div>
-                <div>github.com</div>
-              </div>
-            </div>
-            <div class="d-flex mb-3 border rounded ">
-              <div class="ion-container">
-                <ion-icon class="fs-3" name="location-sharp"></ion-icon>
-              </div>
-              <div class="d-flex flex-column">
-                <div>City</div>
-                <div>Kaunas</div>
-              </div>
-            </div>
-            <div class="d-flex justify-content-between">
-              <ion-icon class="fs-1 text-danger" name="logo-facebook"></ion-icon>
-              <ion-icon class="fs-1 text-danger" name="call-sharp"></ion-icon>
-              <ion-icon class="fs-1 text-danger" name="camera-sharp"></ion-icon>
-              <ion-icon class="fs-1 text-danger" name="cube-outline"></ion-icon>
-            </div>
+
+          </div>
+          <div class="d-flex justify-content-between">
+            <ion-icon class="fs-1 text-danger facebook1" name="logo-facebook"></ion-icon>
+            <ion-icon class="fs-1 text-danger facebook2" name="call-sharp"></ion-icon>
+            <ion-icon class="fs-1 text-danger facebook3" name="camera-sharp"></ion-icon>
+            <ion-icon class="fs-1 text-danger facebook4" name="cube-outline"></ion-icon>
           </div>
         </div>
       </div>
     </div>
   </div>
+  </div>
 
 
   <script>
 
-    const data = [
+    const data = {
+      image: 'https://imgs.search.brave.com/RiAeI3GqYvjKQlEtlsxAiFEzUlAgJgWDKmbs3fVRCiE/rs:fit:736:736:1/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vNzM2/eC9lYi83Yy9jMy9l/YjdjYzNkZGFhODcz/NWYxNjk4ZThkYTBm/MGZhY2ZkMS5qcGc',
+      name: 'Annie Marie',
+      proffesion: 'Proffesional Web Developer',
+      contactDetails: [
+        {
+          label: 'Phone',
+          value: '+37064584754',
+          icon: 'icon1'
+        },
+        {
+          label: 'Email address',
+          value: 'annie.marie@gmail.com',
+          icon: 'icon2'
+        },
+        {
+          label: 'Website',
+          value: 'github.com',
+          icon: 'icon3'
+        },
+        {
+          label: 'City',
+          value: 'Kaunas',
+          icon: 'icon4'
+        }
+      ],
+      contactLinks: [
+        {
+          icon: 'facebook1',
+          url: 'https://facebook.com'
+        },
+        {
+          icon: 'facebook2',
+          url: 'https://facebook.com'
+        },
+        {
+          icon: 'facebook3',
+          url: 'https://facebook.com'
+        },
+        {
+          icon: 'facebook4',
+          url: 'https://facebook.com'
+        },
+      ]
+    };
 
-      {
-        name: 'Phone',
-        telephone: '+3706458184',
-        email: 'Email Address',
-        wholeEmail: 'simonas.luksys@gmail.com',
-        web: 'Website',
-        link: 'github.com',
-        city: 'City',
-        location: 'Kaunas'
-      }
-    ];
+    document.querySelector('div.card div.section img').setAttribute('src', data.image);
+    document.querySelector('div.card div.section h4').textContent = data.name;
+    document.querySelector('div.card div.section h6').textContent = data.proffesion;
 
     let result = '';
 
-
-    data.map(product => {
+    data.contactDetails.map(contact => {
       result += `
- <tr>
-    <td>
-       <img src="${product.picture}" alt="${product.name}"
+              <div class="d-flex mb-3 border rounded ">
+              <div class="ion-container">
+                <ion-icon class="fs-3 ${contact.icon} text-danger" name="call-sharp"></ion-icon>
+              </div>
+              <div class="d-flex flex-column">
+                <div class="text-danger">${contact.label}</div>
+                <div>${contact.value}</div>
+              </div>
+`;
+    })
 
-    </td>
-    <td>${product.name}</td>
-    <td>${product.qty}</td>
-    <td>${product.price}</td>
-    <td>${product.location}</td>
-    <td>${product.price * product.qty}</td>
-    <td>${product.delivery}</td>
- </tr>
-  
-  `;
-    });
+    document.querySelector('div.card-body').innerHTML = result;
 
-    console.log(result)
 
-    document.querySelector('tbody').innerHTML = result;
+
+
   </script>
 
 
