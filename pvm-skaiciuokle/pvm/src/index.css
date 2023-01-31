@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  margin: 50px auto;
+  justify-content: center;
+  background-color: rgba(69, 190, 118, 0.526);
+  max-width: 500px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pvm-counter {
+  padding: 20px;
+}
+
+.pvm-counter div {
+  margin: 20px;
+}
+
+.pvm-counter label {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.pvm-counter input,
+select {
+  width: 80px;
+  text-align: end;
+  font-size: 20px;
+  float: right;
+}
+
+.pvm-counter select {
+  width: 88px;
+  height: 29px;
+}
